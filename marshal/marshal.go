@@ -234,8 +234,12 @@ func (p *ParquetMapJSON) Marshal(node *Node, nodeBuf *NodeBufType, stack []*Node
 		return stack
 	}
 
-	j, _ := json.Marshal(node.Val.Interface())
-	node.Val = reflect.ValueOf(string(j))
+	j, err := json.Marshal(node.Val.Interface())
+	if err != nil {
+		node.Val = reflect.ValueOf(string("{}"))
+	} else {
+		node.Val = reflect.ValueOf(string(j))
+	}
 	stack = append(stack, node)
 	return stack
 }
@@ -339,7 +343,8 @@ func Marshal(srcInterface []interface{}, schemaHandler *schema.SchemaHandler) (t
 			if len(stack) == oldLen {
 				path := node.PathMap.Path
 				index := schemaHandler.MapIndex[path]
-				numChildren := schemaHandler.SchemaElements[index].GetNumChildren()
+				schema := schemaHandler.SchemaElements[index]
+				numChildren := schema.GetNumChildren()
 				if numChildren > int32(0) {
 					for key, table := range res {
 						if common.IsChildPath(path, key) {
@@ -350,9 +355,15 @@ func Marshal(srcInterface []interface{}, schemaHandler *schema.SchemaHandler) (t
 					}
 				} else {
 					table := res[path]
-					table.Values = append(table.Values, nil)
-					table.DefinitionLevels = append(table.DefinitionLevels, node.DL)
-					table.RepetitionLevels = append(table.RepetitionLevels, node.RL)
+					if schema.GetConvertedType() == parquet.ConvertedType_JSON {
+						table.Values = append(table.Values, "{}")
+						table.DefinitionLevels = append(table.DefinitionLevels, node.DL)
+						table.RepetitionLevels = append(table.RepetitionLevels, node.RL)
+					} else {
+						table.Values = append(table.Values, nil)
+						table.DefinitionLevels = append(table.DefinitionLevels, node.DL)
+						table.RepetitionLevels = append(table.RepetitionLevels, node.RL)
+					}
 				}
 			}
 		}
