@@ -10,5 +10,5 @@ require (
 	github.com/klauspost/compress v1.16.7
 	github.com/pierrec/lz4/v4 v4.1.15
 	github.com/stretchr/testify v1.8.0
-	github.com/ercsniper/parquet-go-source v1.0.0
+	github.com/ercsniper/parquet-go-source v1.0.1
 )
