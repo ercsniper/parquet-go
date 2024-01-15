@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"log"
 
+	"github.com/ercsniper/parquet-go-source/local"
 	"github.com/ercsniper/parquet-go/reader"
 	"github.com/ercsniper/parquet-go/writer"
-	"github.com/xitongsys/parquet-go-source/local"
 )
 
 type Student struct {

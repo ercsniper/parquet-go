@@ -9,13 +9,13 @@ import (
 	"sync"
 
 	"github.com/apache/thrift/lib/go/thrift"
+	"github.com/ercsniper/parquet-go-source/writerfile"
 	"github.com/ercsniper/parquet-go/common"
 	"github.com/ercsniper/parquet-go/layout"
 	"github.com/ercsniper/parquet-go/marshal"
 	"github.com/ercsniper/parquet-go/parquet"
 	"github.com/ercsniper/parquet-go/schema"
 	"github.com/ercsniper/parquet-go/source"
-	"github.com/xitongsys/parquet-go-source/writerfile"
 )
 
 // ParquetWriter is a writer  parquet file

@@ -9,10 +9,10 @@ import (
 	"github.com/apache/arrow/go/v12/arrow"
 	"github.com/apache/arrow/go/v12/arrow/array"
 	"github.com/apache/arrow/go/v12/arrow/memory"
+	"github.com/ercsniper/parquet-go-source/buffer"
+	"github.com/ercsniper/parquet-go-source/writerfile"
 	"github.com/ercsniper/parquet-go/reader"
 	"github.com/stretchr/testify/assert"
-	"github.com/xitongsys/parquet-go-source/buffer"
-	"github.com/xitongsys/parquet-go-source/writerfile"
 )
 
 // testSchema is schema for the testint table which covers all
@@ -460,7 +460,8 @@ func TestE2ESequentialValid(t *testing.T) {
 	err = w.WriteStop()
 	assert.Nil(t, err)
 
-	parquetFile, err := buffer.NewBufferFile(buf.Bytes())
+	parquetFile := buffer.NewBufferFile()
+	_, err = parquetFile.Write(buf.Bytes())
 	assert.Nil(t, err)
 
 	pr, err := reader.NewParquetReader(parquetFile, nil, 1)
@@ -517,7 +518,8 @@ func TestE2EConcurrentValid(t *testing.T) {
 	err = w.WriteStop()
 	assert.Nil(t, err)
 
-	parquetFile, err := buffer.NewBufferFile(buf.Bytes())
+	parquetFile := buffer.NewBufferFile()
+	_, err = parquetFile.Write(buf.Bytes())
 	assert.Nil(t, err)
 
 	pr, err := reader.NewParquetReader(parquetFile, nil, 1)
@@ -574,7 +576,8 @@ func TestE2ENullabilityValid(t *testing.T) {
 	err = w.WriteStop()
 	assert.Nil(t, err)
 
-	parquetFile, err := buffer.NewBufferFile(buf.Bytes())
+	parquetFile := buffer.NewBufferFile()
+	_, err = parquetFile.Write(buf.Bytes())
 	assert.Nil(t, err)
 
 	pr, err := reader.NewParquetReader(parquetFile, nil, 1)

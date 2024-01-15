@@ -14,12 +14,12 @@ import (
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/s3/s3manager"
 
+	"github.com/ercsniper/parquet-go-source/local"
+	"github.com/ercsniper/parquet-go-source/s3"
 	"github.com/ercsniper/parquet-go/reader"
 	"github.com/ercsniper/parquet-go/source"
 	"github.com/ercsniper/parquet-go/tool/parquet-tools/schematool"
 	"github.com/ercsniper/parquet-go/tool/parquet-tools/sizetool"
-	"github.com/xitongsys/parquet-go-source/local"
-	"github.com/xitongsys/parquet-go-source/s3"
 )
 
 func main() {
