@@ -4,11 +4,11 @@ import (
 	"log"
 	"time"
 
+	"github.com/ercsniper/parquet-go/common"
+	"github.com/ercsniper/parquet-go/parquet"
+	"github.com/ercsniper/parquet-go/reader"
+	"github.com/ercsniper/parquet-go/writer"
 	"github.com/xitongsys/parquet-go-source/local"
-	"github.com/xitongsys/parquet-go/common"
-	"github.com/xitongsys/parquet-go/parquet"
-	"github.com/xitongsys/parquet-go/reader"
-	"github.com/xitongsys/parquet-go/writer"
 )
 
 type Student struct {

@@ -4,12 +4,12 @@ import (
 	"fmt"
 
 	"github.com/apache/arrow/go/v12/arrow"
-	"github.com/xitongsys/parquet-go/common"
-	"github.com/xitongsys/parquet-go/layout"
-	"github.com/xitongsys/parquet-go/marshal"
-	"github.com/xitongsys/parquet-go/parquet"
-	"github.com/xitongsys/parquet-go/schema"
-	"github.com/xitongsys/parquet-go/source"
+	"github.com/ercsniper/parquet-go/common"
+	"github.com/ercsniper/parquet-go/layout"
+	"github.com/ercsniper/parquet-go/marshal"
+	"github.com/ercsniper/parquet-go/parquet"
+	"github.com/ercsniper/parquet-go/schema"
+	"github.com/ercsniper/parquet-go/source"
 )
 
 const (

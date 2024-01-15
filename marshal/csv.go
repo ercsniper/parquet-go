@@ -1,13 +1,13 @@
 package marshal
 
 import (
-	"github.com/xitongsys/parquet-go/common"
-	"github.com/xitongsys/parquet-go/layout"
-	"github.com/xitongsys/parquet-go/parquet"
-	"github.com/xitongsys/parquet-go/schema"
+	"github.com/ercsniper/parquet-go/common"
+	"github.com/ercsniper/parquet-go/layout"
+	"github.com/ercsniper/parquet-go/parquet"
+	"github.com/ercsniper/parquet-go/schema"
 )
 
-//Marshal function for CSV like data
+// Marshal function for CSV like data
 func MarshalCSV(records []interface{}, schemaHandler *schema.SchemaHandler) (*map[string]*layout.Table, error) {
 	res := make(map[string]*layout.Table)
 	if ln := len(records); ln <= 0 {
