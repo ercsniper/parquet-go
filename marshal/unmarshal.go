@@ -1,6 +1,7 @@
 package marshal
 
 import (
+	"encoding/json"
 	"errors"
 	"reflect"
 	"strings"
@@ -171,6 +172,13 @@ func Unmarshal(tableMap *map[string]*layout.Table, bgn int, end int, dstInterfac
 				case reflect.Map:
 					if po.IsNil() {
 						po.Set(reflect.MakeMap(poType))
+					}
+
+					if *cT == parquet.ConvertedType_JSON {
+						var m = make(map[string]interface{})
+						json.Unmarshal([]byte(val.(string)), &m)
+						po.Set(reflect.ValueOf(m))
+						break OuterLoop
 					}
 
 					mapRec, ok := mapRecords[po]

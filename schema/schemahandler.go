@@ -340,7 +340,7 @@ func NewSchemaHandlerFromStruct(obj interface{}) (sh *SchemaHandler, err error) 
 			newItem.GoType = item.GoType.Elem()
 			stack = append(stack, newItem)
 
-		} else if item.GoType.Kind() == reflect.Map {
+		} else if item.GoType.Kind() == reflect.Map && item.Info.Type != "BYTE_ARRAY" {
 			schema := parquet.NewSchemaElement()
 			schema.Name = item.Info.InName
 			rt1 := item.Info.RepetitionType

@@ -1,6 +1,7 @@
 package marshal
 
 import (
+	"encoding/json"
 	"errors"
 	"reflect"
 
@@ -223,6 +224,22 @@ func (p *ParquetMap) Marshal(node *Node, nodeBuf *NodeBufType, stack []*Node) []
 	return stack
 }
 
+type ParquetMapJSON struct {
+	schemaHandler *schema.SchemaHandler
+}
+
+func (p *ParquetMapJSON) Marshal(node *Node, nodeBuf *NodeBufType, stack []*Node) []*Node {
+	keys := node.Val.MapKeys()
+	if len(keys) <= 0 {
+		return stack
+	}
+
+	j, _ := json.Marshal(node.Val.Interface())
+	node.Val = reflect.ValueOf(string(j))
+	stack = append(stack, node)
+	return stack
+}
+
 //Convert the objects to table map. srcInterface is a slice of objects
 func Marshal(srcInterface []interface{}, schemaHandler *schema.SchemaHandler) (tb *map[string]*layout.Table, err error) {
 	defer func() {
@@ -298,6 +315,8 @@ func Marshal(srcInterface []interface{}, schemaHandler *schema.SchemaHandler) (t
 				sele := schemaHandler.SchemaElements[schemaIndex]
 				if !sele.IsSetConvertedType() {
 					m = &ParquetMapStruct{schemaHandler: schemaHandler}
+				} else if sele.GetConvertedType() == parquet.ConvertedType_JSON {
+					m = &ParquetMapJSON{schemaHandler: schemaHandler}
 				} else {
 					m = &ParquetMap{schemaHandler: schemaHandler}
 				}
