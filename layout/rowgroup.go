@@ -4,10 +4,10 @@ import (
 	"errors"
 	"sync"
 
-	"github.com/ercsniper/parquet-go/common"
-	"github.com/ercsniper/parquet-go/parquet"
-	"github.com/ercsniper/parquet-go/schema"
-	"github.com/ercsniper/parquet-go/source"
+	"github.com/zyreio/parquet-go/common"
+	"github.com/zyreio/parquet-go/parquet"
+	"github.com/zyreio/parquet-go/schema"
+	"github.com/zyreio/parquet-go/source"
 )
 
 // RowGroup stores the RowGroup in parquet file

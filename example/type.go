@@ -4,10 +4,10 @@ import (
 	"log"
 	"strconv"
 
-	"github.com/ercsniper/parquet-go-source/local"
-	"github.com/ercsniper/parquet-go/reader"
-	"github.com/ercsniper/parquet-go/types"
-	"github.com/ercsniper/parquet-go/writer"
+	"github.com/zyreio/parquet-go-source/local"
+	"github.com/zyreio/parquet-go/reader"
+	"github.com/zyreio/parquet-go/types"
+	"github.com/zyreio/parquet-go/writer"
 )
 
 type TypeList struct {

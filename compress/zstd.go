@@ -4,8 +4,8 @@
 package compress
 
 import (
-	"github.com/ercsniper/parquet-go/parquet"
 	"github.com/klauspost/compress/zstd"
+	"github.com/zyreio/parquet-go/parquet"
 )
 
 func init() {

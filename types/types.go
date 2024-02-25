@@ -5,7 +5,7 @@ import (
 	"math/big"
 	"reflect"
 
-	"github.com/ercsniper/parquet-go/parquet"
+	"github.com/zyreio/parquet-go/parquet"
 )
 
 func ParquetTypeToGoReflectType(pT *parquet.Type, rT *parquet.FieldRepetitionType) reflect.Type {

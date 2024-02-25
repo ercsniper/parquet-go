@@ -1,6 +1,6 @@
 package compress
 
-import "github.com/ercsniper/parquet-go/parquet"
+import "github.com/zyreio/parquet-go/parquet"
 
 func init() {
 	compressors[parquet.CompressionCodec_UNCOMPRESSED] = &Compressor{

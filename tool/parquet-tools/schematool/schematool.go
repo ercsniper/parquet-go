@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/ercsniper/parquet-go/parquet"
-	"github.com/ercsniper/parquet-go/schema"
+	"github.com/zyreio/parquet-go/parquet"
+	"github.com/zyreio/parquet-go/schema"
 )
 
 func ParquetTypeToParquetTypeStr(pT *parquet.Type, cT *parquet.ConvertedType) (string, string) {

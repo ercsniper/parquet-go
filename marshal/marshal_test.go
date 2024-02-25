@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/ercsniper/parquet-go/schema"
+	"github.com/zyreio/parquet-go/schema"
 )
 
 type marshalCases struct {

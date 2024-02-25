@@ -3,7 +3,7 @@ package compress
 import (
 	"fmt"
 
-	"github.com/ercsniper/parquet-go/parquet"
+	"github.com/zyreio/parquet-go/parquet"
 )
 
 type Compressor struct {

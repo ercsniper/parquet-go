@@ -5,10 +5,10 @@ import (
 	"os"
 	"time"
 
-	"github.com/ercsniper/parquet-go-source/local"
-	"github.com/ercsniper/parquet-go/parquet"
-	"github.com/ercsniper/parquet-go/reader"
-	"github.com/ercsniper/parquet-go/writer"
+	"github.com/zyreio/parquet-go-source/local"
+	"github.com/zyreio/parquet-go/parquet"
+	"github.com/zyreio/parquet-go/reader"
+	"github.com/zyreio/parquet-go/writer"
 )
 
 type Student struct {

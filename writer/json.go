@@ -3,12 +3,12 @@ package writer
 import (
 	"io"
 
-	"github.com/ercsniper/parquet-go-source/writerfile"
-	"github.com/ercsniper/parquet-go/layout"
-	"github.com/ercsniper/parquet-go/marshal"
-	"github.com/ercsniper/parquet-go/parquet"
-	"github.com/ercsniper/parquet-go/schema"
-	"github.com/ercsniper/parquet-go/source"
+	"github.com/zyreio/parquet-go-source/writerfile"
+	"github.com/zyreio/parquet-go/layout"
+	"github.com/zyreio/parquet-go/marshal"
+	"github.com/zyreio/parquet-go/parquet"
+	"github.com/zyreio/parquet-go/schema"
+	"github.com/zyreio/parquet-go/source"
 )
 
 type JSONWriter struct {

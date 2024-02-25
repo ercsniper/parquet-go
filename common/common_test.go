@@ -7,8 +7,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/ercsniper/parquet-go/parquet"
-	. "github.com/ercsniper/parquet-go/types"
+	"github.com/zyreio/parquet-go/parquet"
+	. "github.com/zyreio/parquet-go/types"
 )
 
 func TestHeadToUpper(t *testing.T) {

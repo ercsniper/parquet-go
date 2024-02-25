@@ -5,7 +5,7 @@ import (
 	"math/bits"
 	"testing"
 
-	"github.com/ercsniper/parquet-go/parquet"
+	"github.com/zyreio/parquet-go/parquet"
 )
 
 func TestToInt64(t *testing.T) {

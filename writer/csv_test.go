@@ -3,7 +3,7 @@ package writer
 import (
 	"testing"
 
-	"github.com/ercsniper/parquet-go-source/buffer"
+	"github.com/zyreio/parquet-go-source/buffer"
 )
 
 func BenchmarkWriteCSV(b *testing.B) {

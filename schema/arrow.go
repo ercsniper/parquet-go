@@ -4,8 +4,8 @@ import (
 	"fmt"
 
 	"github.com/apache/arrow/go/v12/arrow"
-	"github.com/ercsniper/parquet-go/common"
-	"github.com/ercsniper/parquet-go/parquet"
+	"github.com/zyreio/parquet-go/common"
+	"github.com/zyreio/parquet-go/parquet"
 )
 
 // Schema metadata used to parse the native and converted types and

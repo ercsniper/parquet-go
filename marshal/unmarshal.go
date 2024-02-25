@@ -6,10 +6,10 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/ercsniper/parquet-go/common"
-	"github.com/ercsniper/parquet-go/layout"
-	"github.com/ercsniper/parquet-go/parquet"
-	"github.com/ercsniper/parquet-go/schema"
+	"github.com/zyreio/parquet-go/common"
+	"github.com/zyreio/parquet-go/layout"
+	"github.com/zyreio/parquet-go/parquet"
+	"github.com/zyreio/parquet-go/schema"
 )
 
 // Record Map KeyValue pair

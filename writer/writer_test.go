@@ -8,12 +8,12 @@ import (
 	"testing"
 
 	"github.com/apache/thrift/lib/go/thrift"
-	"github.com/ercsniper/parquet-go-source/buffer"
-	"github.com/ercsniper/parquet-go-source/writerfile"
-	"github.com/ercsniper/parquet-go/parquet"
-	"github.com/ercsniper/parquet-go/reader"
-	"github.com/ercsniper/parquet-go/source"
 	"github.com/stretchr/testify/assert"
+	"github.com/zyreio/parquet-go-source/buffer"
+	"github.com/zyreio/parquet-go-source/writerfile"
+	"github.com/zyreio/parquet-go/parquet"
+	"github.com/zyreio/parquet-go/reader"
+	"github.com/zyreio/parquet-go/source"
 )
 
 // TestNullCountsFromColumnIndex tests that NullCounts is correctly set in the ColumnIndex.

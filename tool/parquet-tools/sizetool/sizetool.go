@@ -3,7 +3,7 @@ package sizetool
 import (
 	"fmt"
 
-	"github.com/ercsniper/parquet-go/reader"
+	"github.com/zyreio/parquet-go/reader"
 )
 
 func GetParquetFileSize(name string, pr *reader.ParquetReader, pretty, uncompressedSize bool) string {

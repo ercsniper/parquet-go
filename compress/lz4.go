@@ -8,8 +8,8 @@ import (
 	"io"
 	"sync"
 
-	"github.com/ercsniper/parquet-go/parquet"
 	"github.com/pierrec/lz4/v4"
+	"github.com/zyreio/parquet-go/parquet"
 )
 
 func init() {

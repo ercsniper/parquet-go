@@ -3,8 +3,8 @@ package reader
 import (
 	"fmt"
 
-	"github.com/ercsniper/parquet-go/schema"
-	"github.com/ercsniper/parquet-go/source"
+	"github.com/zyreio/parquet-go/schema"
+	"github.com/zyreio/parquet-go/source"
 )
 
 // NewParquetColumnReader creates a parquet column reader

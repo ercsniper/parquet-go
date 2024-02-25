@@ -9,7 +9,7 @@ import (
 	"testing"
 	"unsafe"
 
-	"github.com/ercsniper/parquet-go/parquet"
+	"github.com/zyreio/parquet-go/parquet"
 )
 
 func TestReadPlainBOOLEAN(t *testing.T) {

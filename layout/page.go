@@ -8,11 +8,11 @@ import (
 	"math/bits"
 
 	"github.com/apache/thrift/lib/go/thrift"
-	"github.com/ercsniper/parquet-go/common"
-	"github.com/ercsniper/parquet-go/compress"
-	"github.com/ercsniper/parquet-go/encoding"
-	"github.com/ercsniper/parquet-go/parquet"
-	"github.com/ercsniper/parquet-go/schema"
+	"github.com/zyreio/parquet-go/common"
+	"github.com/zyreio/parquet-go/compress"
+	"github.com/zyreio/parquet-go/encoding"
+	"github.com/zyreio/parquet-go/parquet"
+	"github.com/zyreio/parquet-go/schema"
 )
 
 // Page is used to store the page data
